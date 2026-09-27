@@ -3,6 +3,7 @@
 
 
 | Niveles | Usado |
+| --- | --- |
 | 1 | Si |
 | 2 | Si | 
 | 3 | No |
