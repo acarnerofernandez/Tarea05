@@ -27,7 +27,7 @@ public class metodos {
     //una vez inicializado leemos la respuesta del proceso mediante el BufferedReader reader,
     //con el buchle el programa revisa todas las lineas de tezto que haya y las guarda en el outputBuffer
     // con el siguiente errorReader hace lo mismo que el reader pero solo ante posibles mensajes de error
-    //con el codigoSalida waitFor lo que hace es parar ese proceso hasta que termine para que luego en el catch se decida si da error o no
+    //con el codigoSalida waitFor lo que hace es parar ese proceso hasta que termine y dice si da error o no
 
     public static void Lanzador(String usuario) {
         int codigoSalida = 1;
