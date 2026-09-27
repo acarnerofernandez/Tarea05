@@ -32,6 +32,7 @@ public class metodos {
     public static void Lanzador(String usuario) {
         int codigoSalida = 1;
         StringBuilder outputBuffer = new StringBuilder();
+        boolean esPrimo = false;
 
         try {
             ProcessBuilder pb = new ProcessBuilder("factor", usuario);
@@ -43,6 +44,11 @@ public class metodos {
                 String linea;
                 while ((linea = reader.readLine()) != null) {
                     outputBuffer.append(linea);
+
+                    if (linea.contains(": " + usuario)){
+                        esPrimo = true;
+                    }
+                        
                 }
             }
 
@@ -63,6 +69,10 @@ public class metodos {
 
         if (codigoSalida == 0) {
             System.out.println("[OK] " + outputBuffer);
+            if (esPrimo){
+                System.out.println("Es primo");
+            }
+            
         } else {
             System.out.println("[ERROR] " + outputBuffer);
         }
